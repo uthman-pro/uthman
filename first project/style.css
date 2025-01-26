@@ -7,7 +7,7 @@ body{
     background-color: wheat;
     padding: 16px;
     position: absolute;
-    top: 380px;
+    top: 38%;
     left: 35%;
     border-radius: 12px;
     z-index: 0;
@@ -31,7 +31,7 @@ body{
     font-weight: bold;
     background-color: pink;
     margin-left: 37%;
-    margin-top: 356px;
     position: absolute;
+    top: 36%;
     z-index: 1;
 }
