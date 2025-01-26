@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+}
+.otter{
+    height: 200px;
+    width: 400px;
+    background-color: wheat;
+    padding: 16px;
+    position: absolute;
+    top: 380px;
+    left: 35%;
+    border-radius: 12px;
+    z-index: 0;
+    background-color: white;
+}
+.essay{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+}
+.essay-heading{
+    padding: 24px;
+    font-size: 25px;
+    width: 300px;
+    text-align: center;
+    margin-left: 40px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: pink;
+    margin-left: 37%;
+    margin-top: 356px;
+    position: absolute;
+    z-index: 1;
+}
