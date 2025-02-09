@@ -1,0 +1,145 @@
+body{
+    background-color: rgb(229, 237, 240);
+}
+.mn{
+    visibility: hidden;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 240px 300px;
+    row-gap: 20px;
+    column-gap: 40px;
+    /*
+    first part figured out. */
+}
+.regis input{
+    padding: 10px;
+    width: 240px;
+    border: 1px solid rgb(231, 231, 231);
+}
+.regis{
+    font-weight: bold;
+}
+.right-sect{
+    width: 550px;
+    padding: 22px;
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    box-shadow: 0px 0px 6px rgb(229, 237, 240);
+}
+.regis .we{
+    width: 520px;
+}
+.sec6{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.register{
+    width: 544px;
+    padding: 14px;
+    margin-top: 38px;
+    border: none;
+    background-color: aquamarine;
+}
+.soup{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0.9;
+}
+.soup a{
+    color: aquamarine;
+}
+.top{
+    font-size: 40px;
+    font-weight: bold;
+}
+.bott{
+    opacity: 0.6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tSection{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+@media screen and (max-width: 1500px) {
+    .right-sect{
+        height: 480px;
+        position: absolute;
+        top: 30px;
+        width: 470px;
+    }
+    .regis input{
+        padding: 4px;
+        width: 200px;
+    }
+    .grid{
+        row-gap: 2px;
+        column-gap: 18px;
+    }
+    .regis .we{
+        width: 460px;
+    }
+    .register{
+        width: 470px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .soup{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .right-sect{
+        width: 200px;
+        position: absolute;
+        right: 22%;
+    }
+    .we{
+        width: 100px;
+    }
+    .mn{
+        visibility: visible;
+        position: absolute;
+        top: 80px;
+        right: 12%;
+        left: 60px;
+        margin-bottom: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .regis .we{
+        width: 200px;
+    }
+    .right-sect{
+        height: 760px;
+        position: absolute;
+        width: 220px;
+        top: 140px;
+        left: 10%;
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+    .register{
+        width: 210px;
+        margin-top: 30px;
+    }
+    .soup{
+        font-size: 13px;
+    }
+    .bott{
+        visibility: hidden;
+    }
+    .top{
+        position: absolute;
+        top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
