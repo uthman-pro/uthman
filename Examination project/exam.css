@@ -1,0 +1,96 @@
+.miss{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    background-color: red;
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    padding: 12px;
+    width: 300px;
+    box-shadow: 2px 2px 12px red;
+    visibility: hidden;
+}
+
+.get{
+    background-color: cornflowerblue;
+    width: 300px;
+    padding: 12px;
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    box-shadow: 2px 2px 12px cornflowerblue;
+    visibility: hidden;
+}
+
+.get,
+.miss{
+    position: fixed;
+}
+
+.view{
+    padding: 12px;
+    width: 140px;
+    border: none;
+    background-color: dodgerblue;
+    box-shadow: 2px 2px 12px dodgerblue;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+.options h2{
+    background-color: moccasin;
+    width: 400px;
+    padding: 6px;
+    box-shadow: 1px 6px 14px moccasin;
+}
+body{
+    max-height: 6000px;
+    background-color: rgb(156, 149, 88);
+}
+.score-sect{
+    background-color: mistyrose;
+    padding: 14px;
+    padding-top: 2px;
+    padding-bottom: 28px;
+    width: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 7px burlywood;
+    font-size: 12px;
+    border: 1px solid rgb(231, 231, 231);
+    height: 120px;
+    position: fixed;
+    left: 65%;
+    background: linear-gradient(to left, purple, lightblue);
+    box-shadow: 2px 2px 84px plum;
+    visibility: hidden;
+}
+.main{
+    position: absolute;
+    left: 20%;
+}
+.score-sect h2{
+    font-size: 18px;
+}
+.submit{
+    width: 415px;
+    position: absolute;
+    top: 3577px;
+    left: 20%;
+    margin-bottom: 781px;
+    padding: 12px;
+    margin-top: 100px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to left, lightpink, lightblue, indigo);
+    border: 1px solid rgb(231, 231, 231);
+}
