@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+<style>
+        .fun{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: "Pacifico", cursive;
+            font-weight: 1000;
+            font-size: 20px;
+            background-color: black;
+            text-align: center;
+            padding: 12px;
+            display: none;
+        }
+        .fun li{
+            border: 1px solid snow;
+            padding: 6px;
+            display: block;
+            color: white;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .fun li:hover{
+            box-shadow: 0px 0px 20px purple;
+            cursor: pointer;
+        }
+        .tImage{
+            position: absolute;
+            z-index: 2;
+            height: 40px;
+            top: 20px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="go-function">
+        <img src="./image.png" alt="Nothing" class="tImage">
+    </div>
+        <div class="fun">
+            <ul>
+                <li><i class="fa fa-fw fa-home"></i>Home</li>
+                <li><i class="fa fa-fw fa-renren"></i>About</li>
+                <li><i class="fa fa-fw fa-graduation-cap"></i>Projects</li>
+                <li><i class="fa fa-fw fa-user"></i>Join</li>
+            </ol>
+        </div>
+
+
+
+        <script>
+
+            const st_button = document.querySelector('.tImage');
+            const hid_button = document.querySelector('.fun');
+            let bo_lean = false;
+
+            st_button.addEventListener('click', () => {
+
+                if(!bo_lean) {
+                    hid_button.style.display = 'inherit';
+                    bo_lean = true;
+                    st_button.src = 'arrow.png';
+                } else {
+                    hid_button.style.display = 'none';
+                    bo_lean = false;
+                    st_button.src = 'image.png';
+                }
+
+            });
+
+
+        </script>
+
+
+
+        </html>
+</body>

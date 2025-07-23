@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+    background-color: rgb(45, 45, 117);
+    margin-top: 100px;
+    font-family: 'Sofia';
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+
+
+/* This is the design for the sliding-opening-function  */
+
+
+.side-left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: royalblue;
+    width: 50%;
+    transition: 3s width;
+}
+.side-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: maroon;
+    width: 50%;
+    transition: 3s width;
+}
+@keyframes right{
+    to{
+        width: 0;
+    }
+}
+.text{
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    font-style: italic;
+}
+.text h3{
+    margin-left: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.explore{
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Lobster;
+    padding: 12px;
+    margin-left: 10px;
+    transition: 1s width;
+    border: none;
+    border-radius: 12px;
+}
+.img-5{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.img-section{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: black;
+    padding: 12px;
+    border-radius: 50%;
+    border:  2px solid rgb(231, 231, 231);
+    transition: 2s transform;
+}
+.img-section:hover{
+    transform: rotate(360deg);
+}
+.flying{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    transition: 3s font-size;
+}
+.text-fly{
+    background-color: black;
+    position: absolute;
+    top: 110px;
+    right: 220px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px white;
+    visibility: hidden;
+}
+.flying:hover{
+    font-size: 30px;
+    text-shadow: 2px 4px 8px white;
+}
+.pg-mar{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 6px;
+    border: 1px solid silver;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.page-marquee{
+    position: absolute;
+    bottom: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid silver;
+    padding: 6px;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+}
+.sliding-opening-function{
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+}
+
+
+
+
+
+/*   */
+
+
+.m-home{
+    margin-left: 20px;
+}
+.content-header{
+    flex: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding-bottom: 8px;
+    display: flex;
+    z-index: 7;
+}
+
+.logo-icon{
+    height: 53px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.search-input{
+    width: 50%;
+    height: 38px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    font-family: Sopia, Arial;
+    font-size: 15px;
+    padding-left: 6px;
+}
+
+.middle-section {
+    margin-top: 10px;
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  /*
+  .search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+    */
+
+.search{
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+.s-button{
+    border: none;
+    height: 40px;
+    width: 45px;
+    background-color: darkred;
+    flex-shrink: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.flex-box{
+    display: inline-flex;
+    color: white;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+}
+.flex-box h3{
+    cursor: pointer;
+}
+
+.img-mC{
+    float: left;
+    margin-right: 20px;
+    height: 500px;
+    width: 700px;
+}
+.switch{
+    position: absolute;
+    right: 20px;
+    margin-top: 100px;
+    display: flex;
+}
+.switch-1{
+    display: flex;
+    flex-direction: column;
+    background-color: lightcyan;
+    height: 450px;
+    width: 300px;
+    outline: 1px solid silver;
+    outline-offset: 6px;
+}
+.switch-1:hover{
+    box-shadow: 0px 4px 60px #9786d4;
+    outline: 2px solid rgb(128, 35, 172);
+}
+
+.switch-2:hover{
+    box-shadow: 0px 4px 60px lightsteelblue;
+    outline: 2px solid lightskyblue;
+}
+.switch-2{
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    height: 450px;
+    width: 300px;
+    outline: 1px solid silver;
+    outline-offset: 6px;
+    margin-left: 40px;
+}
+.switch1-img{
+    height: 260px;
+    width: 300px;
+}
+.switch2-img{
+    height: 260px;
+    width: 300px;
+}
+.switch1-text,
+.switch2-text{
+    margin-left: 10px;
+}
+.switch a{
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+    caret-color: darkblue;
+    font-weight: bold;
+}
+.central-text{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.soft{
+    margin-left: 150px;
+}
+
+/* down*/
+
+.down-section{
+    margin-top: 530px;
+    height: 1100px;
+    border: 1px solid silver;
+    margin-left: 200px;
+    margin-right: 220px;
+    margin-bottom: 100px;
+    box-shadow: 4px 8px 28px rgba(0, 0, 0, 0.5);
+    transition: 2s ease border;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 80px 50px;
+    padding: 40px;
+    padding-right: 20px;
+}
+
+.img-sect{
+    height: 220px;
+    width: 400px;
+    opacity: 1;
+    border-bottom: 2px solid silver;
+}
+
+.section{
+    position: static;
+    height: 500px;
+    width: 400px;
+    border: 2px solid silver;
+    outline: 2px solid silver;
+    outline-offset: 4px;
+}
+.x{
+    margin-top: -95px;
+}
+.x p{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 18px;
+}
+.x h3{
+    margin-left: 8px;
+}
+.x h2{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.trans{
+    height: 50px;
+    width: 120px;
+    background-color: snow;
+    position: relative;
+    top: -150px;
+    left: 90px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Lobster';
+    margin-left: 10px;
+}
+.trans-py{
+    height: 50px;
+    width: 150px;
+    background-color: snow;
+    position: relative;
+    top: -150px;
+    left: 90px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Lobster';
+}
+
+
+.section a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+.content-main{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: visible;
+}
+.content-about{
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+.down-section:hover{
+    border: 3px solid indigo;
+    box-shadow: 4px 8px 68px indigo;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* down or bottom of the website oterwise called footer*/
+
+.bottom-section{
+    height: 300px;
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+
+
+@media (max-width: 600px) {
+
+.crease{
+    font-size: 17px;
+}
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    
+<!--this is for the opening-->
+
+
+<div class="sliding-opening-function">
+    <div class="text">
+        <h1>Uthman Application Program</h1>
+        <h3 class="crease">Join us to learn programming and coding <br>in this website we have games to-do list
+            and other website <br> please if you are intrested Join us and explore with us the
+            <strong>CODING/AI</strong> era.
+        </h3>
+    
+        <button class="explore">Explore</button>
+    </div>
+    
+    <div class="side-left"></div>
+    <div class="side-right">
+        <!--huge text-->
+        <div class="text-fly">
+        <h2 class="flying">Uthman dev Welcome</h2>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="img-section">
+        <img src="./icons/img-5.avif" class="img-5">
+    </div>
+    
+    
+    <div class="page-marquee">
+        <marquee behavior="scroll" direction="right"> 
+            This page is created by 'Uthman Adegboye' I created this project 
+            as an entertaiment, learning, and fun experience Application I
+            created it for the purpose of Elevating the programming world
+            we have AI's that write Programs if we do not grow or develop 
+            alongside it we will be left Behind.
+        </marquee>
+    </div>
+    
+    
+            <div class="pg-mar">
+            <marquee behavior="scroll" direction="right">
+                This is the Coding Era this is our Era , we can't be left behind,
+                Join me in my mission to ekevate the programming world.
+            </marquee>
+        </div>
+    </div>
+    
+    
+    <!--Ending of the opening-->
+    
+    
+    
+    <!--main page code-->
+    <div class="content-main">
+            <div class="content-header">
+                <img src="./logos/log0.1.3.png" class="logo-icon">
+                <div class="middle-section">
+                    <input type="text" class="search-input" placeholder="Search for Anything">
+                <button spellcheck="true" class="s-button"><img src="./icons/search-icon.png" class="search"></button>
+    </div>
+                    <div class="flex-box">
+                        <h3 class=""><i class="fa fa-fw fa-home"></i>Home</h3>
+    
+                        <h3 class="about-function"><i class="fa fa-fw fa-renren"></i>About</h3>
+    
+                        <h3 class="project"><i class="fa fa-fw fa-graduation-cap"></i>Projects</h3>
+    
+                        <h3 class="join"><i class="fa fa-fw fa-user"></i>Join</h3> 
+    
+                    </div>
+    
+                    <div class="phone-sec">
+                        <select class="choose">
+                            <option value="" class="option1"><h3 class=""><i class="fa fa-fw fa-home"></i>Home</h3></option>
+                            <option value="" class="option2"><h3 class="about-function"><i class="fa fa-fw fa-renren"></i>About</h3></option>
+                            <option value="" class="option3"><h3 class="project"><i class="fa fa-fw fa-graduation-cap"></i>Projects</h3></option>
+                            <option value="" class="option4"><h3 class="join"><i class="fa fa-fw fa-user"></i>Join</h3></option>
+                        </select>
+                    </div>
+    </div>
+    
+        <div class="m-home">
+            <div class="main-home">
+                <h3 class="img-text">
+                    <img src="./icons/img-c.avif" class="img-mC">
+                        This Website is created for the purpose of elevating/upgrading the coding/prograamming world <br> 
+                        Now everybody uses <b>AI</b> to write codes but that is why this website is created, <br>
+                        Our imagination is broad so with this Website our Misson: Is to bring or turn our <br>
+                        imagination into <b>A Reality.</b>
+                </h3>
+            <div class="switch">
+                
+            <span class="home-page">
+                <div class="switch-1">
+                    <img src="./icons/img-5.avif" class="switch1-img">
+    
+                        <!---->
+    
+                        <div class="switch1-text">
+                            <h2>PROGRAMMING</h2>
+                            <p>
+                                Programming is actually different coding <br>
+                                programming is the act writing computer codes
+                                like AI's programming API's and Advanced games.
+                                learn more with us. 
+                            </p>
+                        </div>
+                    </div>
+            </span>
+    
+            <span class="home-page">
+                <div class="switch-2">
+                    <img src="./icons/img-a.jpg" class="switch2-img">
+    
+                    <div class="switch2-text">
+                        <h2>CODING</h2>
+                        <p>
+                            Coding is the act of writing codes it can be 
+                            used in <b>API's</b> and games but not compex one's
+                            e.g of coding languages i.e html, css, and js.
+                        </p>
+                    </div>
+                </div>
+            </span>
+    
+    
+            </div>
+        </div>
+    </div>
+    
+    
+    
+        <!--The main text with rotational-loader -->
+            <div class="central-text">
+                <h1>Uthman's Adegboye Application <br><span class="soft">Software</span> </h1>
+            </div>
+    
+            <div class="down-section">
+    
+                    <div class="html section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans"><h1><b>HTML</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Html</a></h2>
+                            <h3>Html: hyper text mack-up language</h3>
+                            <p>
+                                <!--inner text about html-->
+                                Html, what is html most of you might be
+                                familiar with the word html it means
+                                <b>"HyperText macup language"</b> it is used
+                                in website development                 
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="css section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans"><h1><b>CSS</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Css</a></h2>
+                            <h3>Css: cascading style sheet</h3>
+                            <p>
+                                <!--inner text about css-->
+                            </p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="js section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans"><h1><b>JS</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Javascript</a></h2>
+                            <h3>Css: cascading style sheet</h3>
+                            <p>
+                                <!--inner text about js-->
+                            </p>
+                        </div>
+                    </div>
+    
+    
+    
+                    
+                    <div class="php section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans"><h1><b>PHP</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Php</a></h2>
+                            <h3>Php: hypertext markup processor</h3>
+                            <p>
+    
+                            </p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="python section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans trans-py"><h1><b>PHYTON</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Python</a></h2>
+                            <h3>Pyton: It just a progamming language</h3>
+                            <p>
+    
+                            </p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="section">
+                        <img src="./logos/background-1.jpg" class="img-sect">
+                        <div class="trans"><h1><b>CSS</b></h1></div>
+                        <div class="x">
+                            <h2><a href="#">Learn Python</a></h2>
+                            <h3>Python: It just a progamming language</h3>
+                            <p>
+    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!--it is inside this this in this one !!-->
+    
+    
+            <div class="bottom-section"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <div class="content-about">
+                <div class="content-header">
+                    <img src="./logos/log0.1.3.png" class="logo-icon">
+                    <div class="middle-section">
+                        <input type="text" class="search-input" placeholder="Search for Anything">
+                    <button class="s-button"><img src="./icons/search-icon.png" class="search"></button>
+                    </div>
+                    <div class="flex-box">
+                    <h3 class="home-function">
+                        <i class="fa fa-fw fa-home"></i>Home</a></h3>
+                    <h3 class="">
+                        <i class="fa fa-fw fa-renren"></i>About</h3>
+                    <h3 class="">
+                        <i class="fa fa-fw fa-graduation-cap"></i>Projects</h3>
+                    <h3 class="">
+                        <i class="fa fa-fw fa-user"></i>Join</h3>     
+                    </div>
+                </div>
+                <!--rest-->
+            </div>
+
+
+
+    <script>
+
+        //run functions
+
+// imports closed
+
+function clearFront() {
+    document.querySelector('.side-left').style.animation = 'right 4s ease';
+    document.querySelector('.side-right').style.animation = 'right 4s ease';
+    setTimeout(() => {
+        document.querySelector('.explore').style.width = '310px';
+    }, 400);
+
+    setTimeout(() => {
+        document.querySelector('.text').style.visibility = 'hidden';
+        document.querySelector('.text-fly').style.visibility = 'hidden';
+        document.querySelector('.img-section').style.visibility = 'hidden';
+        document.querySelector('.page-marquee').style.visibility = 'hidden';
+        document.querySelector('.pg-mar').style.visibility = 'hidden';
+    }, 1200);
+    setTimeout(() => {
+        document.body.style = "overflow-y: scroll";
+        document.querySelector('.sliding-opening-function').style.visibility = 'hidden';
+    }, 3000);
+}
+
+
+function pop() {
+    document.querySelector('.text-fly').style.visibility = 'visible'
+    }
+
+
+    // This is for the main page scripting.
+
+
+
+function homeSetting() {
+    document.querySelector('.content-main').style.visibility = 'visible';
+}
+
+function abouts() {
+    document.body.style.backgroundColor = 'white';
+    
+    document.querySelector('.content-main').style.visibility = 'hidden';
+     document.querySelector('.content-about').style.visibility = 'visible';
+
+}
+
+function homes() {
+    document.body.style.backgroundColor = 'rgb(45, 45, 117)';
+
+     document.querySelector('.content-about').style.visibility = 'hidden';
+     document.querySelector('.content-main').style.visibility = 'visible';
+}
+
+document.querySelector('.img-5')
+    .addEventListener('click', () => {
+    pop();
+});
+document.querySelector('.explore')
+    	.addEventListener('click', () => {
+    clearFront();
+});
+
+
+document.querySelector('.about-function').addEventListener('click', () => { abouts(); });
+document.querySelector('.home-function').addEventListener('click', () => { homes(); });
+
+
+
+    </script>
+</body>
+</html>

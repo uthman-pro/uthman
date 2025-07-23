@@ -1,0 +1,497 @@
+body{
+    background-color: rgb(45, 45, 117);
+    margin-top: 100px;
+    font-family: 'Sofia';
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+
+
+/* This is the design for the sliding-opening-function  */
+
+
+.side-left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: royalblue;
+    width: 50%;
+    transition: 3s width;
+}
+.side-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: maroon;
+    width: 50%;
+    transition: 3s width;
+}
+@keyframes right{
+    to{
+        width: 0;
+    }
+}
+.text{
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    font-style: italic;
+}
+.text h3{
+    margin-left: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.explore{
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Lobster;
+    padding: 12px;
+    margin-left: 10px;
+    transition: 1s width;
+    border: none;
+    border-radius: 12px;
+}
+.img-5{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.img-section{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: black;
+    padding: 12px;
+    border-radius: 50%;
+    border:  2px solid rgb(231, 231, 231);
+    transition: 2s transform;
+}
+.img-section:hover{
+    transform: rotate(360deg);
+}
+.flying{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    transition: 3s font-size;
+}
+.text-fly{
+    background-color: black;
+    position: absolute;
+    top: 110px;
+    right: 220px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px white;
+    visibility: hidden;
+}
+.flying:hover{
+    font-size: 30px;
+    text-shadow: 2px 4px 8px white;
+}
+.pg-mar{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 6px;
+    border: 1px solid silver;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.page-marquee{
+    position: absolute;
+    bottom: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid silver;
+    padding: 6px;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+}
+.sliding-opening-function{
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+}
+
+
+
+
+
+/*   */
+
+
+.m-home{
+    margin-left: 20px;
+}
+.content-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding-bottom: 8px;
+    display: flex;
+    z-index: 7;
+    align-items: center;
+}
+
+.logo-icon{
+    height: 53px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+
+.search-input{
+    width: 50%;
+    height: 38px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    font-family: Sopia, Arial;
+    font-size: 15px;
+    padding-left: 6px;
+}
+
+.middle-section {
+    margin-top: 10px;
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  /*
+  .search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+    */
+
+.search{
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+.s-button{
+    border: none;
+    height: 40px;
+    width: 45px;
+    background-color: darkred;
+    flex-shrink: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.flex-box{
+    display: inline-flex;
+    color: white;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+.phone-sec{
+    visibility: hidden;
+}
+.phone-sec option{
+    text-align: center;
+    font-size: 20px;
+    font-family: Lobster;
+    border-radius: 6px;
+    border: 2px solid yellow;
+}
+.option1, 
+.option2{
+    border-radius: 6px;
+}
+.choose{
+    margin-right: 20px;
+    width: 100px;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Lobster;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.flex-box h3{
+    cursor: pointer;
+}
+.img-text{
+    text-align: center;
+}
+
+.img-mC{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    width: 600px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+
+.switch{
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+.switch-1{
+    display: flex;
+    flex-direction: column;
+    background-color: lightcyan;
+    height: 450px;
+    width: 300px;
+    outline: 1px solid silver;
+    outline-offset: 6px;
+}
+.switch-1:hover{
+    box-shadow: 0px 4px 60px #9786d4;
+    outline: 2px solid rgb(128, 35, 172);
+}
+
+.switch-2:hover{
+    box-shadow: 0px 4px 60px lightsteelblue;
+    outline: 2px solid lightskyblue;
+}
+.switch-2{
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    height: 450px;
+    width: 300px;
+    outline: 1px solid silver;
+    outline-offset: 6px;
+    margin-left: 40px;
+}
+.switch1-img{
+    height: 260px;
+    width: 300px;
+}
+.switch2-img{
+    height: 260px;
+    width: 300px;
+}
+.switch1-text,
+.switch2-text{
+    margin-left: 10px;
+}
+.switch a{
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+    caret-color: darkblue;
+    font-weight: bold;
+}
+.central-text{
+    text-align: center;
+}
+.soft{
+    margin-left: 150px;
+}
+
+/* down*/
+
+.down-section{
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid silver;
+    box-shadow: 4px 8px 28px rgba(0, 0, 0, 0.5);
+    transition: 2s ease border;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 30px;
+}
+
+.img-sect{
+    height: 200px;
+    width: 360px;
+    opacity: 1;
+    border-bottom: 2px solid silver;
+}
+
+.section{
+    position: static;
+    height: 500px;
+    width: 360px;
+    border: 2px solid silver;
+    outline: 2px solid silver;
+    outline-offset: 4px;
+}
+.x{
+    margin-top: -95px;
+}
+.x p{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 18px;
+}
+.x h3{
+    margin-left: 8px;
+}
+.x h2{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.trans{
+    height: 50px;
+    width: 120px;
+    background-color: snow;
+    position: relative;
+    top: -150px;
+    left: 90px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Lobster';
+    margin-left: 10px;
+}
+.trans-py{
+    height: 50px;
+    width: 150px;
+    background-color: snow;
+    position: relative;
+    top: -150px;
+    left: 90px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Lobster';
+}
+
+
+.section a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+.content-main{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: visible;
+}
+.content-about{
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+.down-section:hover{
+    box-shadow: 4px 8px 68px green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* down or bottom of the website oterwise called footer*/
+
+.bottom-section{
+    height: 300px;
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+
+
+
+
+
+.fun{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    font-family: "Pacifico", cursive;
+    font-weight: 1000;
+    font-size: 20px;
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+
+    display: none;
+}
+.fun div{
+    border: 1px solid snow;
+    padding: 8px;
+    text-align: center;
+    color: green;
+}
+.fun div:hover{
+    box-shadow: 0px 0px 20px purple;
+    cursor: pointer;
+}
+.tImage{
+    position: absolute;
+    z-index: 2;
+    height: 40px;
+    top: 20px;
+    right: 10px;
+}
+
+.go-function{
+    display: none;
+}
