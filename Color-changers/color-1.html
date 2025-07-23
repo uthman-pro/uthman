@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changer 1</title>
+    <link rel="stylesheet" href="./styles/color-1.css">
+    <link rel="shortcut icon" href="..//calculator-application/wifi.png" type="image/x-icon">
+</head>
+<body>
+    <div class="color-holder">
+        <h2>Select a color</h2>
+        <div class="colors">
+            <h3 onclick="color('red')">Red</h3>
+            <h3 onclick="color('blue')">Blue</h3>
+            <h3 onclick="color('purple')">purple</h3>
+            <h3 onclick="color('green')">green</h3>
+            <h3 onclick="color('grey')">grey</h3>
+        </div>
+    </div>
+
+    <script>
+        function color(x) {
+            document.body.style.backgroundColor = x;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-2</title>
+    <style>
+        .set{
+            width: 370px;
+            padding: 8px;
+        }
+        .color-input{
+            padding: 8px;
+            margin-left: 10px;
+        }
+        .changer-section h3{
+            font-size: 20px;
+        }
+        .changer-section{
+            border: 1px solid rgb(231, 231, 231);
+            width: 400px;
+            padding-bottom: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            .set{
+                width: 275px;
+                border: 2px solid rgb(231, 231, 231);
+            }
+            .changer-section h3{
+                font-size: 13px;
+                display: inline-block;
+            }
+            .changer-section{
+                min-width: 270px;
+                max-width: 290px;
+                margin-left: 6px;
+            }
+            .color-input{
+                max-width: 125px;
+                min-width: 100px;
+                padding: 4px;
+                margin-left: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="color-sect">
+        <h2>Colour Changer Application</h2>
+        <div class="changer-section">
+            <h3>Choose your colour:<input type="text" class="color-input" placeholder="Colour Name"></h3>
+            <button onclick="changeColor();" class="set">Set color</button>
+        </div>
+    </div>
+
+    <script>
+        function changeColor() {
+            let c = document.querySelector('.color-input');
+            let color = c.value;
+
+            c.value = '';
+
+            document.body.style.backgroundColor = color;
+        }
+
+        document.body.addEventListener('keydown', (event) => {
+            if(event.key === 'Enter') {
+                changeColor();
+            }
+        })
+    </script>
+</body>
+</html>
